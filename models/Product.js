@@ -20,5 +20,3 @@ const ProductSchema = new mongoose.Schema({
 mongoose.models = {};
 
 export default mongoose.model("Product", ProductSchema);
-// avilableQty: { type: Number },
-// size: String,

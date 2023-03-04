@@ -1,5 +1,5 @@
 import Product from '../../models/Product'
-import connectDb from '../../middleware/mongoose'
+import connectDb from '../../middleware/mongoose';
 
 const handler = async (req, res) => {
     if (req.method == 'POST') {
@@ -9,12 +9,8 @@ const handler = async (req, res) => {
             slug: req.body.slug,
             img: req.body.img,
             category: req.body.category,
-            // size: req.body.size ,
-            // color: req.body.color ,
             price: req.body.price,
             prodtImage: req.body.prodtImage,
-            // avilableQty: req.body.avilableQty,
-            // file: req.body.file,
         })
         await addProduct.save();
         res.status(200).json({ success: "Item added succesfully!" })

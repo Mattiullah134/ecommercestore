@@ -163,7 +163,7 @@ export default function Example({ cart, subTotal, deleteItemFromCart }) {
                                           {Object.keys(cart).map((item) => {
                                             return <li key={item} className="flex py-6">
                                               <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                                <img src={cart[item].prodtImage} alt="cart-image" className="h-full w-full object-cover object-center" />
+                                                <img src={cart[item].img} alt="cart-image" className="h-full w-full object-contain object-center" />
                                               </div>
                                               <div className="ml-4 flex flex-1 flex-col">
                                                 <div>

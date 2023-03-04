@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
 // Admin pannel
 import { ThemeProvider } from "@mui/material/styles";
 import { Grid, Stack, TextField, Button, } from "@mui/material";
@@ -36,7 +37,6 @@ function Addproducts() {
       body: data
     })
     const res2 = await res.json();
-    // console.log(res2.url);
     setProdtImage(res2.url);
   }
 
@@ -65,7 +65,6 @@ function Addproducts() {
   }
   const submit = async (e) => {
     e.preventDefault()
-    console.log(prodtImage);
     // fetch the data from form to makes a file in local system
 
     let data = { title, price, img, category, desc, slug, prodtImage };
@@ -78,7 +77,7 @@ function Addproducts() {
       },
       body: JSON.stringify(data),
     })
-    let response = await res.json()
+    let response = await res.json();
     if (response.success === true) {
       toast.success(response.message, { position: "bottom-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "light", });
     }
