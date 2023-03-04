@@ -132,7 +132,7 @@ function Addproducts() {
               // this is used to send the image in the cloudinary and set the product image
               imageUpload();
               // create the url for the page
-              let data1 = `${process.env.NEXT_PUBLIC_HOST}/product/${slug}`;
+              let data1 = `https://pbiproduct.vercel.app/product/${slug}`;
               QRCode.toDataURL(data1).then(setImg);
             }} variant="outlined" mt={2}>Submit</Button>
           </form>
